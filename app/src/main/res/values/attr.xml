@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextView">
+        <attr name="text_view_font" format="enum">
+            <enum name="Tahoma" value="0"/>
+            <enum name="Koodak" value="1"/>
+            <enum name="Titr" value="2"/>
+            <enum name="Zar" value="3"/>
+            <enum name="IRAN_Sans" value="4"/>
+            <enum name="IRAN_Sans_Bold" value="5"/>
+            <enum name="Roboto_Bold" value="6"/>
+            <enum name="RobotoCondensed_Regular" value="7"/>
+            <enum name="Roboto_Light" value="8"/>
+            <enum name="Roboto_Medium" value="9"/>
+            <enum name="Ubuntu_bold" value="10"/>
+            <enum name="Ubuntu_bold_italic" value="11"/>
+            <enum name="Ubuntu_light" value="12"/>
+            <enum name="Ubuntu_light_italic" value="13"/>
+            <enum name="Ubuntu" value="14"/>
+            <enum name="Ubuntu_italic" value="15"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MyButton">
+        <attr name="button_font" format="enum">
+            <enum name="Tahoma" value="0"/>
+            <enum name="Koodak" value="1"/>
+            <enum name="Titr" value="2"/>
+            <enum name="Zar" value="3"/>
+            <enum name="IRAN_Sans" value="4"/>
+            <enum name="IRAN_Sans_Bold" value="5"/>
+            <enum name="Roboto_Bold" value="6"/>
+            <enum name="RobotoCondensed_Regular" value="7"/>
+            <enum name="Roboto_Light" value="8"/>
+            <enum name="Roboto_Medium" value="9"/>
+            <enum name="Ubuntu_bold" value="10"/>
+            <enum name="Ubuntu_bold_italic" value="11"/>
+            <enum name="Ubuntu_light" value="12"/>
+            <enum name="Ubuntu_light_italic" value="13"/>
+            <enum name="Ubuntu" value="14"/>
+            <enum name="Ubuntu_italic" value="15"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MyEditText">
+        <attr name="edit_font" format="enum">
+            <enum name="Tahoma" value="0"/>
+            <enum name="Koodak" value="1"/>
+            <enum name="Titr" value="2"/>
+            <enum name="Zar" value="3"/>
+            <enum name="IRAN_Sans" value="4"/>
+            <enum name="IRAN_Sans_Bold" value="5"/>
+            <enum name="Roboto_Bold" value="6"/>
+            <enum name="RobotoCondensed_Regular" value="7"/>
+            <enum name="Roboto_Light" value="8"/>
+            <enum name="Roboto_Medium" value="9"/>
+            <enum name="Ubuntu_bold" value="10"/>
+            <enum name="Ubuntu_bold_italic" value="11"/>
+            <enum name="Ubuntu_light" value="12"/>
+            <enum name="Ubuntu_light_italic" value="13"/>
+            <enum name="Ubuntu" value="14"/>
+            <enum name="Ubuntu_italic" value="15"/>
+        </attr>
+    </declare-styleable>
+</resources>

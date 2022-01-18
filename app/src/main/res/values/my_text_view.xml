@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="my_textview_bottom_left_radius">15dp</dimen>
+    <dimen name="my_textview_bottom_right_radius">15dp</dimen>
+    <dimen name="my_textview_top_left_radius">15dp</dimen>
+    <dimen name="my_textview_top_right_radius">15dp</dimen>
+
+    <color name="my_textview_background">#e5e7e8</color>
+
+    <dimen name="my_textview_stroke">2dp</dimen>
+    <color name="my_textview_stroke">#c8cacb</color>
+
+    
+
+    <color name="my_textview_text_color">#fff</color>
+    <dimen name="my_textview_text_size">15dp</dimen>
+
+    <dimen name="my_textview_padding_bottom">10dp</dimen>
+    <dimen name="my_textview_padding_top">10dp</dimen>
+    <dimen name="my_textview_padding_right">10dp</dimen>
+    <dimen name="my_textview_padding_left">10dp</dimen>
+
+    <dimen name="my_textview_margin_bottom">10dp</dimen>
+    <dimen name="my_textview_margin_top">10dp</dimen>
+    <dimen name="my_textview_margin_left">10dp</dimen>
+    <dimen name="my_textview_margin_right">10dp</dimen>
+</resources>

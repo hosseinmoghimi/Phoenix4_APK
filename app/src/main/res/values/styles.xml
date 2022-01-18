@@ -1,0 +1,221 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!--badge_danger ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### -->
+    <style name="badge" parent="AppTheme">
+        <item name="button_font">IRAN_Sans</item>
+        <item name="android:textColor">@color/badge_text_color</item>
+        <item name="android:textSize">@dimen/badge_text_size</item>
+        <!-- <item name="android:height">@dimen/Button_height</item>-->
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+    <!--badge_danger ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### -->
+    <style name="badge_danger" parent="badge">
+        <item name="android:background">@drawable/badge_danger</item>
+
+        <item name="android:textColor">@color/badge_danger_text</item>
+    </style>
+
+
+    <!--badge_danger ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### -->
+    <style name="badge_success" parent="badge">
+        <item name="android:background">@drawable/badge_success</item>
+        <item name="android:textColor">@color/badge_success_text</item>
+    </style>
+
+    <!--Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### Button ### -->
+    <style name="Button" parent="AppTheme">
+        <item name="android:background">@drawable/my_button</item>
+        <item name="android:textColor">@color/my_button_text_color</item>
+        <item name="android:textSize">@dimen/my_button_text</item>
+        <!-- <item name="android:height">@dimen/Button_height</item>-->
+        <item name="button_font">IRAN_Sans</item>
+        <item name="android:paddingBottom">@dimen/my_button_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/my_button_padding_top</item>
+        <item name="android:paddingRight">@dimen/my_button_padding_right</item>
+        <item name="android:paddingLeft">@dimen/my_button_padding_left</item>
+
+        <item name="android:layout_marginBottom">@dimen/my_button_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/my_button_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/my_button_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/my_button_margin_right</item>
+
+    </style>
+
+
+    <!--TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ###TextView ### -->
+
+    <style name="TextView">
+        <!-- <item name="android:gravity">center</item>-->
+        <!-- <item name="android:background">@drawable/text_view_header</item>-->
+        <item name="android:textColor">@color/my_textview_text_color</item>
+        <item name="android:textSize">@dimen/my_textview_text_size</item>
+        <!--        <item name="android:background">@drawable/my_textview</item>-->
+        <!--<item name="android:height">@dimen/TextView_header_height</item>-->
+
+        <item name="android:paddingBottom">@dimen/my_textview_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/my_textview_padding_top</item>
+        <item name="android:paddingRight">@dimen/my_textview_padding_right</item>
+        <item name="android:paddingLeft">@dimen/my_textview_padding_left</item>
+
+        <item name="android:layout_marginBottom">@dimen/my_textview_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/my_textview_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/my_textview_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/my_textview_margin_right</item>
+
+    </style>
+
+    <!--EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###EditText ###-->
+    <style name="EditText">
+
+        <!-- <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/my_edittext</item>
+        <item name="android:textColor">@color/my_edittext_text_color</item>
+        <item name="android:textSize">@dimen/my_edittext_text_size</item>
+        <!--<item name="android:height">@dimen/EditText_height</item>-->
+
+        <item name="android:paddingBottom">@dimen/my_edittext_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/my_edittext_padding_top</item>
+        <item name="android:paddingRight">@dimen/my_edittext_padding_right</item>
+        <item name="android:paddingLeft">@dimen/my_edittext_padding_left</item>
+
+        <item name="android:layout_marginBottom">@dimen/my_edittext_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/my_edittext_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/my_edittext_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/my_edittext_margin_right</item>
+
+
+    </style>
+
+
+    <!--DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### DialogsubmitButton ### -->
+    <style name="DialogSubmitButton" parent="AppTheme">
+        <item name="android:background">@drawable/my_dialog_submit_button</item>
+        <item name="android:textColor">@color/my_dialog_submit_button_text_color</item>
+        <item name="android:textSize">@dimen/my_dialog_submit_button_text</item>
+        <!-- <item name="android:height">@dimen/DialogsubmitButton_height</item>-->
+
+        <item name="android:paddingBottom">@dimen/my_dialog_submit_button_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/my_dialog_submit_button_padding_top</item>
+        <item name="android:paddingRight">@dimen/my_dialog_submit_button_padding_right</item>
+        <item name="android:paddingLeft">@dimen/my_dialog_submit_button_padding_left</item>
+
+        <item name="android:layout_marginBottom">@dimen/my_dialog_submit_button_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/my_dialog_submit_button_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/my_dialog_submit_button_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/my_dialog_submit_button_margin_right</item>
+
+    </style>
+
+
+    <!--DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### DialogCancelButton ### -->
+    <style name="DialogCancelButton" parent="AppTheme">
+        <item name="android:background">@drawable/my_dialog_cancel_button</item>
+        <item name="android:textColor">@color/my_dialog_cancel_button_text_color</item>
+        <item name="android:textSize">@dimen/my_dialog_cancel_button_text</item>
+        <!-- <item name="android:height">@dimen/DialogCancelButton_height</item>-->
+
+        <item name="android:paddingBottom">@dimen/my_dialog_cancel_button_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/my_dialog_cancel_button_padding_top</item>
+        <item name="android:paddingRight">@dimen/my_dialog_cancel_button_padding_right</item>
+        <item name="android:paddingLeft">@dimen/my_dialog_cancel_button_padding_left</item>
+
+        <item name="android:layout_marginBottom">@dimen/my_dialog_cancel_button_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/my_dialog_cancel_button_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/my_dialog_cancel_button_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/my_dialog_cancel_button_margin_right</item>
+
+    </style>
+
+    <style name="FullscreenTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <!--        &lt;!&ndash;suppress AndroidDomInspection &ndash;&gt;-->
+        <!--        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>-->
+        <!--        &lt;!&ndash;suppress AndroidDomInspection &ndash;&gt;-->
+        <!--        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>-->
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Theme_AlertDialog"></style>
+
+    <color name="badge_text_color">#fff</color>
+
+
+    <color name="black_overlay">#eee</color>
+    <dimen name="badge_text_size">15dp</dimen>
+    <dimen name="headerTextSize">10dip</dimen>
+    <dimen name="newsMoreTextSize">10dip</dimen>
+
+
+    <!--designs for login and register-->
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="loginParent" parent="parent">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/loginBkColor</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="headerText" parent="parent">
+        <item name="android:textSize">@dimen/headerTextSize</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loginCard" parent="parent"></style>
+
+    <style name="linearParent" parent="parent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="headerTextPrimary" parent="headerText">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:textSize">@dimen/newsMoreTextSize</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/primaryTextColor
+        </item>
+    </style>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="loginButton" parent="viewParent">
+        <item name="android:background">@drawable/login_shape_bk</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

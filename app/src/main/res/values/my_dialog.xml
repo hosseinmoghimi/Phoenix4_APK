@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="my_dialog_bottom_left_radius">0dp</dimen>
+    <dimen name="my_dialog_bottom_right_radius">0dp</dimen>
+    <dimen name="my_dialog_top_left_radius">0dp</dimen>
+    <dimen name="my_dialog_top_right_radius">0dp</dimen>
+
+
+    <dimen name="my_dialog_stroke">1dp</dimen>
+
+
+    <dimen name="my_dialog_text">15dp</dimen>
+    <dimen name="my_dialog_padding_bottom">10dp</dimen>
+    <dimen name="my_dialog_padding_top">10dp</dimen>
+    <dimen name="my_dialog_padding_right" >10dp</dimen>
+    <dimen name="my_dialog_padding_left">10dp</dimen>
+    <dimen name="my_dialog_margin_bottom">10dp</dimen>
+    <dimen name="my_dialog_margin_top">10dp</dimen>
+    <dimen name="my_dialog_margin_left">10dp</dimen>
+    <dimen name="my_dialog_margin_right">10dp</dimen>
+
+
+
+
+    <color name="my_dialog_stroke">#446d3b</color>
+
+    <color name="my_dialog_background_color">#dae7db</color>
+    <color name="my_dialog_title_color">#165b1b</color>
+
+
+
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="my_edittext_bottom_left_radius">50dp</dimen>
+    <dimen name="my_edittext_bottom_right_radius">50dp</dimen>
+    <dimen name="my_edittext_top_left_radius">50dp</dimen>
+    <dimen name="my_edittext_top_right_radius">50dp</dimen>
+
+    <color name="my_edittext_background">#CDEBF3</color>
+
+    <dimen name="my_edittext_stroke">1dp</dimen>
+    <color name="my_edittext_stroke">#c8cacb</color>
+
+
+
+
+
+    <dimen name="my_edittext_bottom_left_radius_focused">15dp</dimen>
+    <dimen name="my_edittext_bottom_right_radius_focused">15dp</dimen>
+    <dimen name="my_edittext_top_left_radius_focused">15dp</dimen>
+    <dimen name="my_edittext_top_right_radius_focused">15dp</dimen>
+
+    <color name="my_edittext_background_focused">#d2d5d6</color>
+
+    <color name="my_edittext_stroke_focused">#c8cacb</color>
+    <dimen name="my_edittext_stroke_focused">2dp</dimen>
+
+
+
+
+    <color name="my_edittext_text_color">#11296C</color>
+    <dimen name="my_edittext_text_size">15dp</dimen>
+
+    <dimen name="my_edittext_padding_bottom">10dp</dimen>
+    <dimen name="my_edittext_padding_top">10dp</dimen>
+    <dimen name="my_edittext_padding_right">20dp</dimen>
+    <dimen name="my_edittext_padding_left">20dp</dimen>
+
+    <dimen name="my_edittext_margin_bottom">10dp</dimen>
+    <dimen name="my_edittext_margin_top">10dp</dimen>
+    <dimen name="my_edittext_margin_left">10dp</dimen>
+    <dimen name="my_edittext_margin_right">10dp</dimen>
+</resources>

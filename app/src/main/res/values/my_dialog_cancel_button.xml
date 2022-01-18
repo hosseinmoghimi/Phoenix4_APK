@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="my_dialog_cancel_button_bottom_left_radius_pressed">5dp</dimen>
+    <dimen name="my_dialog_cancel_button_bottom_right_radius_pressed">5dp</dimen>
+    <dimen name="my_dialog_cancel_button_top_left_radius_pressed">5dp</dimen>
+    <dimen name="my_dialog_cancel_button_top_right_radius_pressed">5dp</dimen>
+
+    <dimen name="my_dialog_cancel_button_bottom_left_radius">0dp</dimen>
+    <dimen name="my_dialog_cancel_button_bottom_right_radius">0dp</dimen>
+    <dimen name="my_dialog_cancel_button_top_left_radius">0dp</dimen>
+    <dimen name="my_dialog_cancel_button_top_right_radius">0dp</dimen>
+
+
+    <dimen name="my_dialog_cancel_button_stroke_pressed">1dp</dimen>
+    <dimen name="my_dialog_cancel_button_stroke">1dp</dimen>
+
+
+    <dimen name="my_dialog_cancel_button_text">15dp</dimen>
+    <dimen name="my_dialog_cancel_button_padding_bottom">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_padding_top">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_padding_right" >10dp</dimen>
+    <dimen name="my_dialog_cancel_button_padding_left">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_margin_bottom">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_margin_top">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_margin_left">10dp</dimen>
+    <dimen name="my_dialog_cancel_button_margin_right">10dp</dimen>
+
+
+
+
+    <color name="my_dialog_cancel_button_stroke">#773030</color>
+    <color name="my_dialog_cancel_button_stroke_pressed">#773030</color>
+
+    <color name="my_dialog_cancel_button_background_pressed">#e46161</color>
+    <color name="my_dialog_cancel_button_background">#faabab</color>
+
+    <color name="my_dialog_cancel_button_text_color">#605656</color>
+
+
+
+    <dimen name="my_dialog_cancel_button_text_size">15dp</dimen>
+
+    
+</resources>

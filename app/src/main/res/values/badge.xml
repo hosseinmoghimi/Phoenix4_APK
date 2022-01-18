@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="badge_stroke">1dp</dimen>
+
+    <color name="badge_danger_background">#BC2828</color>
+    <color name="badge_danger_stroke">#8A1717</color>
+    <color name="badge_danger_text">#FFFFFF</color>
+
+    <color name="badge_success_background">#2AAA2A</color>
+    <color name="badge_success_stroke">#168816</color>
+    <color name="badge_success_text">#FFFFFF</color>
+
+</resources>
