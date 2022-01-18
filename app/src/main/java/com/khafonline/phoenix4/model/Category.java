@@ -1,5 +1,7 @@
 package com.khafonline.phoenix4.model;
 
+import com.khafonline.phoenix4.repository.CategoryRepository;
+
 public class Category {
     private int id;
     private String title;
@@ -7,6 +9,10 @@ public class Category {
     private int priority;
     private int parent_id;
 
+
+    public int save(){
+        return CategoryRepository.insert(this);
+    }
     public int getParent_id() {
         return parent_id;
     }

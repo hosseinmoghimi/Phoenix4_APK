@@ -1,6 +1,7 @@
 package com.khafonline.phoenix4.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -19,8 +20,9 @@ public class HomeActivity extends AppCompatActivity {
         context=this;
 
 
-        ((Button)findViewById(R.id.home_button)).setOnClickListener(view -> {
-            Toast.makeText(context,"نمایش داده شد.",Toast.LENGTH_LONG).show();
+        ((Button)findViewById(R.id.show_category_button)).setOnClickListener(view -> {
+            Intent intent=new Intent(context,CategoryActivity.class);
+            startActivity(intent);
         });
     }
 }

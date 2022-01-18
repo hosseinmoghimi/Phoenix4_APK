@@ -19,18 +19,28 @@
             android:label="@string/activity_home_title"
             android:theme="@style/Theme.Phoenix4.NoActionBar">
 
-        </activity>
-
-        <activity
-            android:name=".activity.ProductDetailActivity"
-            android:label="@string/activity_home_title"
-            android:theme="@style/Theme.Phoenix4.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.CategoryActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".activity.ProductDetailActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+
+
+
+        </activity>
+
 
     </application>
 

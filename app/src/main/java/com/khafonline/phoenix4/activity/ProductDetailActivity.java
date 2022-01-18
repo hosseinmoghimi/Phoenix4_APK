@@ -8,6 +8,7 @@ import com.khafonline.phoenix4.R;
 import com.khafonline.phoenix4.communication.RetrofitClientInstance;
 import com.khafonline.phoenix4.model.Category;
 import com.khafonline.phoenix4.model.LeoResponse;
+import com.khafonline.phoenix4.repository.CategoryRepository;
 
 
 import java.util.List;
@@ -23,35 +24,11 @@ public class ProductDetailActivity extends MasterActivity {
         attachToBaseActivity(this, R.layout.activity_product_detail);
 
 
-
-
-        ((Button)findViewById(R.id.btn)).setOnClickListener(view -> {
-          get_categories();
-        });
-
-
-
-
-
     }
 
     private void get_categories() {
 
-        String token = "";
-        RetrofitClientInstance.market().categories(token).enqueue(new Callback<LeoResponse>() {
-            @Override
-            public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
-                LeoResponse leoResponse=response.body();
-                List<Category> categories=leoResponse.getCategories();
-                int ddd=categories.size();
 
-            }
-
-            @Override
-            public void onFailure(Call<LeoResponse> call, Throwable t) {
-                int a = 0;
-            }
-        });
 
 
     }
