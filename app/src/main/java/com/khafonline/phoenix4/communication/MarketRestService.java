@@ -1,11 +1,14 @@
 package com.khafonline.phoenix4.communication;
 
 import com.khafonline.phoenix4.model.LeoResponse;
+import com.khafonline.phoenix4.model.User;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface MarketRestService {
@@ -25,8 +28,11 @@ public interface MarketRestService {
 //    @GET("market/api/product/{pk}/")
 //    Call<LeoResponse> product(@Header("token") String token,@Path("pk") int pk);
 
-//    @POST("market/api/add_to_cart/{pk}/")
-//    Call<LeoResponse> product(@Header("token") String token,@Path("pk") int pk);
+    @POST("apk-api/login/")
+    Call<LeoResponse> login( @Body User user);
+
+    @GET("authentication/apk-api/login/")
+    Call<LeoResponse> getToken();
 
 
 }

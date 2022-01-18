@@ -176,8 +176,8 @@ public class SharedPref {
 //        profile.setCity(getString(Constants.SHAREDPREF_PROFILE_REGION));
         profile.setBio(getString(Constants.SHAREDPREF_PROFILE_BIO));
 
-        if (profile.getToken().equals(""))
-            return null;
+//        if (profile.getToken().equals(""))
+//            return null;
         return profile;
 
 

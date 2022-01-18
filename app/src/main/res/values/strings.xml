@@ -25,4 +25,6 @@
     <string name="Yes">بله</string>
     <string name="No">خیر</string>
     <string name="category_list">لیست دسته بندی ها</string>
+    <string name="login">Login</string>
+    <string name="get_profile">دریافت اطلاعات کاربر</string>
 </resources>
