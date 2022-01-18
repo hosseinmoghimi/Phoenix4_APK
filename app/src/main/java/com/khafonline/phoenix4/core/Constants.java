@@ -36,4 +36,5 @@ public class Constants {
 
     public static final String LOG_TAG = "Phoenix4_Log";
     public static final String IMAGE_SERVER_ADDRESS = "https://khafonline.com";
+    public static final String CURRENCY ="تومان" ;
 }

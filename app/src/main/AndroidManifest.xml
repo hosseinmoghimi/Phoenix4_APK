@@ -40,6 +40,14 @@
 
 
         </activity>
+        <activity
+            android:name=".activity.ProductActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+
+
+
+        </activity>
 
 
     </application>

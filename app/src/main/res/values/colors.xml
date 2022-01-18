@@ -18,5 +18,6 @@
     <color name="loginBkColor">#f0f0f0</color>
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
+    <color name="red">#f00</color>
 
 </resources>

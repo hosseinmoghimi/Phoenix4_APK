@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -12,9 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.khafonline.phoenix4.R;
 import com.khafonline.phoenix4.adapter.CategoryAdapter;
+import com.khafonline.phoenix4.adapter.ProductAdapter;
 import com.khafonline.phoenix4.communication.RetrofitClientInstance;
 import com.khafonline.phoenix4.model.Category;
 import com.khafonline.phoenix4.model.LeoResponse;
+import com.khafonline.phoenix4.model.Product;
 import com.khafonline.phoenix4.repository.CategoryRepository;
 
 import java.util.List;
@@ -43,7 +46,7 @@ public class CategoryActivity extends MasterActivity {
             category = CategoryRepository.select(categoryId);
 
         categories = CategoryRepository.selectByParentID(categoryId);
-
+        getProducts();
         fillCategories(categories);
         if (category != null) {
             ((TextView) findViewById(R.id.category_title)).setText(category.getTitle());
@@ -94,4 +97,40 @@ public class CategoryActivity extends MasterActivity {
         });
 
     }
+
+
+    private void getProducts() {
+        String token = "";
+        RetrofitClientInstance.market().list_products_of_category(token, categoryId).enqueue(new Callback<LeoResponse>() {
+            @Override
+            public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
+                LeoResponse leoResponse = response.body();
+                if (leoResponse != null && leoResponse.getResult().equals("SUCCEED")) {
+
+                    if (leoResponse.getProducts().size() < 1) {
+                        findViewById(R.id.product_recyclerView).setVisibility(View.INVISIBLE);
+                    }
+                    List<Product> products = leoResponse.getProducts();
+                    fillProducts(products);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LeoResponse> call, Throwable t) {
+                int a = 0;
+            }
+        });
+
+    }
+
+    private void fillProducts(List<Product> products) {
+        RecyclerView rec = (RecyclerView) findViewById(R.id.product_recyclerView);
+        ProductAdapter adapter = new ProductAdapter(context, products);
+        rec.setAdapter(adapter);
+        LinearLayoutManager layout_manager = new LinearLayoutManager(context, RecyclerView.VERTICAL, false);
+        rec.setLayoutManager(layout_manager);
+
+    }
+
 }

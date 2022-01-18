@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-<com.khafonline.phoenix4.component.MyTextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/category_title"/>
+
+        <com.khafonline.phoenix4.component.MyTextView
+            android:id="@+id/category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <com.khafonline.phoenix4.component.MyButton
             android:id="@+id/get_category_btn"
             android:layout_width="wrap_content"
@@ -28,11 +30,21 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/category_recyclerView"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-           />
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/category_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/product_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
