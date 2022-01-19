@@ -37,4 +37,7 @@ public class Constants {
     public static final String LOG_TAG = "Phoenix4_Log";
     public static final String IMAGE_SERVER_ADDRESS = "https://khafonline.com";
     public static final String CURRENCY ="تومان" ;
+    public static final String NOTIFICATION_CHANNEL_DESCRIPTION = "PHOENIX4_NOTIFICATION_CHANNEL_DESCRIPTION";
+    public static final String NOTIFICATION_CHANNEL_NAME = "PHOENIX4_NOTIFICATION_CHANNEL_NAME";
+    public static final String NOTIFICATION_CHANNEL_ID = "PHOENIX4_NOTIFICATION_CHANNEL_ID";
 }

@@ -28,4 +28,7 @@
     <string name="login">Login</string>
     <string name="get_profile">دریافت اطلاعات کاربر</string>
     <string name="get_categories">دریافت دسته بندی ها از سرور</string>
+    <string name="show_notification">نمایش اعلان جدید</string>
+    <string name="profile">پروفایل</string>
+    <string name="cart">سبد خرید</string>
 </resources>

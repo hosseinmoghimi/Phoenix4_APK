@@ -17,7 +17,10 @@ import com.khafonline.phoenix4.model.LeoResponse;
 import com.khafonline.phoenix4.model.Profile;
 import com.khafonline.phoenix4.model.User;
 import com.khafonline.phoenix4.repository.CategoryRepository;
+import com.khafonline.phoenix4.utility.MyNotification;
+import com.khafonline.phoenix4.utility.MyNotification.MyActionIntent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -33,6 +36,16 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         context = this;
 
+
+        ((Button) findViewById(R.id.home_notification_btn)).setOnClickListener(view -> {
+            String title = "اعلان فونیکس";
+            String text = "متن اعلان فونیکس";
+            Intent intentHome = new Intent(context, CategoryActivity.class);
+            List<MyActionIntent> actionIntents = new ArrayList<>();
+            actionIntents.add(new MyActionIntent(new Intent(context, ProfileActivity.class), context.getString(R.string.profile) ,R.drawable.ic_menu_gallery));
+            actionIntents.add(new MyActionIntent(new Intent(context, CartActivity.class), context.getString(R.string.cart), R.drawable.ic_menu_gallery));
+            MyNotification.notify(title, text, intentHome, actionIntents, R.drawable.ic_menu_share);
+        });
 
         ((Button) findViewById(R.id.show_category_button)).setOnClickListener(view -> {
             Intent intent = new Intent(context, CategoryActivity.class);
