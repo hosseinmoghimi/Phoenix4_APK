@@ -25,6 +25,9 @@ public interface MarketRestService {
     @GET("market/apk-api/products/{category_id}/")
     Call<LeoResponse> list_products_of_category(@Header("token") String token,@Path("category_id") int category_id);
 
+    @GET("market/apk-api/product/{product_id}/")
+    Call<LeoResponse> product(@Path("product_id") int product_id);
+
 //    @GET("market/api/product/{pk}/")
 //    Call<LeoResponse> product(@Header("token") String token,@Path("pk") int pk);
 

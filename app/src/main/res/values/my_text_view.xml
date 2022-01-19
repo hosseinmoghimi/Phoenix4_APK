@@ -13,7 +13,7 @@
 
     
 
-    <color name="my_textview_text_color">#fff</color>
+    <color name="my_textview_text_color">#000000</color>
     <dimen name="my_textview_text_size">15dp</dimen>
 
     <dimen name="my_textview_padding_bottom">10dp</dimen>

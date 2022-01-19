@@ -5,9 +5,18 @@ import java.util.List;
 public class LeoResponse {
     List<Category> categories;
     List<Product> products;
+    Product product;
     String result;
     String token;
     Profile profile;
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public String getToken() {
         return token;

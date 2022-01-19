@@ -8,4 +8,5 @@
     <dimen name="nav_header_profile_image_width">130dp</dimen>
     <dimen name="nav_header_profile_margin_top">35dp</dimen>
     <dimen name="nav_header_profile_corner">45dp</dimen>
+    <dimen name="product_detail_image_width">200dp</dimen>
 </resources>
