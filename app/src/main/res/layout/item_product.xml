@@ -19,19 +19,22 @@
             android:layout_width="100dp"
             android:layout_height="100dp" />
 <LinearLayout
+    android:layoutDirection="rtl"
+    android:paddingStart="25dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="25dp">
 
     <com.khafonline.phoenix4.component.MyTextView
         android:id="@+id/product_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:gravity="start"
         android:text="product_title"
         android:textSize="15dip"
-        android:textColor="@color/black"
-        android:gravity="center_horizontal" />
+        android:textColor="@color/black" />
 
 
 
@@ -39,11 +42,11 @@
         android:id="@+id/product_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:gravity="start"
         android:text="product_title"
         android:textSize="15dip"
-        android:textColor="@color/red"
-        android:gravity="center_horizontal" />
+        android:textColor="@color/red"  />
 
 
 </LinearLayout>

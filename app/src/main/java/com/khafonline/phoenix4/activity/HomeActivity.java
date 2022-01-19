@@ -12,9 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.khafonline.phoenix4.R;
 import com.khafonline.phoenix4.communication.RetrofitClientInstance;
 import com.khafonline.phoenix4.core.SharedPref;
+import com.khafonline.phoenix4.model.Category;
 import com.khafonline.phoenix4.model.LeoResponse;
 import com.khafonline.phoenix4.model.Profile;
 import com.khafonline.phoenix4.model.User;
+import com.khafonline.phoenix4.repository.CategoryRepository;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,6 +43,10 @@ public class HomeActivity extends AppCompatActivity {
             String a = "sss";
         });
 
+        ((Button) findViewById(R.id.get_categories_button)).setOnClickListener(view -> {
+            getCategories();
+        });
+
         Button btn = (Button) findViewById(R.id.login_button);
         Profile profile = SharedPref.getProfile();
         if (profile != null) {
@@ -54,6 +62,34 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
+    private void getCategories() {
+        String token = "";
+        RetrofitClientInstance.market().categories(token).enqueue(new Callback<LeoResponse>() {
+            @Override
+            public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
+                LeoResponse leoResponse = response.body();
+                if (leoResponse != null && leoResponse.getResult().equals("SUCCEED")) {
+
+
+                    List<Category> categories = leoResponse.getCategories();
+                    if (categories.size() > 0)
+                        CategoryRepository.deleteAll();
+                    CategoryRepository.insertList(categories);
+
+                    List<Category> aaa = CategoryRepository.selectAll();
+                    int aaddfa = 0;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LeoResponse> call, Throwable t) {
+                int a = 0;
+            }
+        });
+
+    }
+
 
     private void authenticate() {
 

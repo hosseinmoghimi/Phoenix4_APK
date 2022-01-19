@@ -39,23 +39,17 @@ public class CategoryActivity extends MasterActivity {
         context = this;
         categoryId = getIntent().getIntExtra(ARG_CATEGORY_ID, 0);
 
-        if (categoryId > 0)
-
+        if (categoryId > 0) {
             category = CategoryRepository.select(categoryId);
-
+        }
         categories = CategoryRepository.selectByParentID(categoryId);
         getProducts();
         fillCategories(categories);
         if (category != null) {
             ((TextView) findViewById(R.id.category_title)).setText(category.getTitle());
         }
-        Button get_category_btn = findViewById(R.id.get_category_btn);
-        get_category_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getCategories();
-            }
-        });
+
+
     }
 
     private void fillCategories(List<Category> categories) {
@@ -67,35 +61,6 @@ public class CategoryActivity extends MasterActivity {
         rec.setLayoutManager(layout_manager);
 
     }
-
-    private void getCategories() {
-        String token = "";
-        RetrofitClientInstance.market().categories(token).enqueue(new Callback<LeoResponse>() {
-            @Override
-            public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
-                LeoResponse leoResponse = response.body();
-                if (leoResponse != null && leoResponse.getResult().equals("SUCCEED")) {
-
-
-                    List<Category> categories = leoResponse.getCategories();
-                    fillCategories(categories);
-                    if (categories.size() > 0)
-                        CategoryRepository.deleteAll();
-                    CategoryRepository.insertList(categories);
-
-                    List<Category> aaa = CategoryRepository.selectAll();
-                    int aaddfa = 0;
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LeoResponse> call, Throwable t) {
-                int a = 0;
-            }
-        });
-
-    }
-
 
     private void getProducts() {
         String token = "";
