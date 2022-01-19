@@ -2,9 +2,11 @@ package com.khafonline.phoenix4.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.FrameLayout;
@@ -29,7 +31,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MasterActivity extends AppCompatActivity {
+public class MasterActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Activity context;
     Profile profile;
     private AppBarConfiguration mAppBarConfiguration;
@@ -67,8 +69,10 @@ public class MasterActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                Intent intent=new Intent(context,CartActivity.class);
+                startActivity(intent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -76,13 +80,46 @@ public class MasterActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_cart,R.id.nav_setting)
                 .setDrawerLayout(drawer)
                 .build();
+
+        setNavigationViewListener();
         profile = SharedPref.getProfile();
         if (profile != null)
             showProfileInDrawer(navigationView);
     }
+
+
+    private void setNavigationViewListener() {
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_cart) {
+            Intent intent = new Intent(context, CartActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_setting) {
+            Intent intent = new Intent(context, SettingActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_profile) {
+            Intent intent = new Intent(context, ProfileActivity.class);
+            startActivity(intent);
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(Gravity.RIGHT);
+        return true;
+    }
+
+
+
 
     public void showProfileInDrawer(NavigationView navigationView ) {
         View vvv=navigationView.getHeaderView(0);

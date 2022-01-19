@@ -31,4 +31,5 @@
     <string name="show_notification">نمایش اعلان جدید</string>
     <string name="profile">پروفایل</string>
     <string name="cart">سبد خرید</string>
+    <string name="setting">تنظیمات</string>
 </resources>

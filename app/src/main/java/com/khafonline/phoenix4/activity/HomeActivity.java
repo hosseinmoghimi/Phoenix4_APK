@@ -51,6 +51,15 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(context, CategoryActivity.class);
             startActivity(intent);
         });
+
+
+
+        ((Button) findViewById(R.id.show_setting_button)).setOnClickListener(view -> {
+            Intent intent = new Intent(context, SettingActivity.class);
+            startActivity(intent);
+        });
+
+
         ((Button) findViewById(R.id.get_profile_button)).setOnClickListener(view -> {
             Profile profile = SharedPref.getProfile();
             String a = "sss";
