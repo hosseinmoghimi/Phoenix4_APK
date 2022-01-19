@@ -31,7 +31,6 @@ public class CategoryActivity extends MasterActivity {
     private int categoryId = 0;
     Category category;
     List<Category> categories;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,6 @@ public class CategoryActivity extends MasterActivity {
         this.attachToBaseActivity(this, R.layout.activity_category);
         context = this;
         categoryId = getIntent().getIntExtra(ARG_CATEGORY_ID, 0);
-
 
         if (categoryId > 0)
 
@@ -106,13 +104,11 @@ public class CategoryActivity extends MasterActivity {
             public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
                 LeoResponse leoResponse = response.body();
                 if (leoResponse != null && leoResponse.getResult().equals("SUCCEED")) {
-
                     if (leoResponse.getProducts().size() < 1) {
                         findViewById(R.id.product_recyclerView).setVisibility(View.INVISIBLE);
                     }
                     List<Product> products = leoResponse.getProducts();
                     fillProducts(products);
-
                 }
             }
 

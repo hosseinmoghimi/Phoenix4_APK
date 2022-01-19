@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         Profile profile = SharedPref.getProfile();
         if (profile != null) {
             btn.setText(profile.getName());
-
+            startActivity(new Intent(context, CategoryActivity.class));
         }
         btn.setOnClickListener(view -> {
             authenticate();
