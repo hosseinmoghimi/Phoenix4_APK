@@ -1,13 +1,44 @@
 package com.khafonline.phoenix4.model;
 
 public class Profile {
+    int id;
     User user;
     String first_name;
     String last_name;
     String mobile;
     String image;
+    String email;
     String bio;
     String token;
+    String address;
+
+    public Profile(String first_name, String last_name, String mobile, String email, String bio, String address) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.mobile = mobile;
+        this.email = email;
+        this.address = address;
+        this.bio = bio;
+    }
+
+    public Profile() {
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getToken() {
         return token;
@@ -67,5 +98,13 @@ public class Profile {
 
     public String getName() {
         return this.first_name+" "+this.last_name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

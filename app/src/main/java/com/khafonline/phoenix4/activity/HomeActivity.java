@@ -1,11 +1,17 @@
 package com.khafonline.phoenix4.activity;
 
+import android.app.Activity;
+import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +35,7 @@ import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
     Context context;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,6 +67,36 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+        ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == Activity.RESULT_OK) {
+                            // There are no request codes
+                            Intent data = result.getData();
+                            ((Button) findViewById(R.id.login_btn)).setText("LOGIN OK");
+                        }
+
+                        else {
+                            // There are no request codes
+                            Intent data = result.getData();
+                            ((Button) findViewById(R.id.login_btn)).setText("LOGIN Cancel");
+                        }
+
+                    }
+
+
+
+                });
+
+        ((Button) findViewById(R.id.login_btn)).setOnClickListener(view -> {
+            Intent intent = new Intent(context, LoginActivity.class);
+            someActivityResultLauncher.launch(intent);
+
+        });
+
+
         ((Button) findViewById(R.id.get_profile_button)).setOnClickListener(view -> {
             Profile profile = SharedPref.getProfile();
             String a = "sss";
@@ -69,18 +106,14 @@ public class HomeActivity extends AppCompatActivity {
             getCategories();
         });
 
-        Button btn = (Button) findViewById(R.id.login_button);
-        Profile profile = SharedPref.getProfile();
+         Profile profile = SharedPref.getProfile();
         if (profile != null) {
-            btn.setText(profile.getName());
             startActivity(new Intent(context, CategoryActivity.class));
         }
-        btn.setOnClickListener(view -> {
-            authenticate();
+        if (profile == null) {
+            startActivity(new Intent(context, CartActivity.class));
+        }
 
-        });
-
-        int a = 0;
 
 
     }
@@ -113,25 +146,4 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    private void authenticate() {
-
-        String username = "khafonli";
-        String password = "leonolan@2020";
-        User user = new User(username, password);
-        RetrofitClientInstance.market().login(user).enqueue(new Callback<LeoResponse>() {
-            @Override
-            public void onResponse(Call<LeoResponse> call, Response<LeoResponse> response) {
-                LeoResponse leoResponse = response.body();
-                Profile profile = leoResponse.getProfile();
-                String token = leoResponse.getToken();
-                SharedPref.setProfile(profile);
-            }
-
-            @Override
-            public void onFailure(Call<LeoResponse> call, Throwable t) {
-                int a = 0;
-            }
-        });
-
-    }
-}
+   }

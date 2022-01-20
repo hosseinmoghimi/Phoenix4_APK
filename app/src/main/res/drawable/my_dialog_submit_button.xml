@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/my_dialog_submit_button_stroke_pressed" android:color="@color/my_dialog_submit_button_stroke_pressed" />
+            <corners
 
+                android:bottomLeftRadius="@dimen/my_dialog_submit_button_bottom_left_radius_pressed"
+                android:bottomRightRadius="@dimen/my_dialog_submit_button_bottom_right_radius_pressed"
+                android:topLeftRadius="@dimen/my_dialog_submit_button_top_left_radius_pressed"
+                android:topRightRadius="@dimen/my_dialog_submit_button_top_right_radius_pressed"
+
+
+                />
+            <solid android:color="@color/my_dialog_submit_button_background_pressed" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="@dimen/my_dialog_submit_button_bottom_left_radius"
+                android:bottomRightRadius="@dimen/my_dialog_submit_button_bottom_right_radius"
+                android:topLeftRadius="@dimen/my_dialog_submit_button_top_left_radius"
+                android:topRightRadius="@dimen/my_dialog_submit_button_top_right_radius"
+                />
+            <stroke android:width="@dimen/my_dialog_submit_button_stroke" android:color="@color/my_dialog_submit_button_stroke" />
+            <solid android:color="@color/my_dialog_submit_button_background" />
+        </shape>
+    </item>
 </selector>

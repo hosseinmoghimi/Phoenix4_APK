@@ -1,6 +1,7 @@
 package com.khafonline.phoenix4.communication;
 
 import com.khafonline.phoenix4.model.LeoResponse;
+import com.khafonline.phoenix4.model.Profile;
 import com.khafonline.phoenix4.model.User;
 
 import retrofit2.Call;
@@ -33,6 +34,22 @@ public interface MarketRestService {
 
     @POST("apk-api/login/")
     Call<LeoResponse> login( @Body User user);
+
+
+
+
+    @POST("market/apk-api/cart/")
+    Call<LeoResponse> cart( @Header("token") String token);
+
+
+
+
+    @POST("apk-api/edit_profile/{profile_id}/")
+    Call<LeoResponse> edit_profile(@Header("token") String token, @Body Profile profile,@Path("profile_id") int profile_id);
+
+
+
+
 
     @GET("authentication/apk-api/login/")
     Call<LeoResponse> getToken();

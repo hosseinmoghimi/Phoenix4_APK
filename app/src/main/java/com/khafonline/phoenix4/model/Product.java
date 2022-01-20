@@ -1,13 +1,9 @@
 package com.khafonline.phoenix4.model;
 
-public class Product {
-    private int id;
-    private String title;
-    private String thumbnail;
+public class Product extends BasicPage{
+
     private int category_id;
     private  int price;
-    private  int priority;
-    private String description;
 
 
     public Product(int id, String title, int priority, String thumbnail, int category_id) {
@@ -31,37 +27,7 @@ public class Product {
         this.price = price;
     }
 
-    public int getPriority() {
-        return priority;
-    }
 
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
-    }
 
     public int getCategory_id() {
         return category_id;
@@ -71,11 +37,4 @@ public class Product {
         this.category_id = category_id;
     }
 
-    public String getDescription() {
-        return this.description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

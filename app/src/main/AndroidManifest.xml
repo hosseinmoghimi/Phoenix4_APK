@@ -36,17 +36,40 @@
             android:name=".activity.ProductDetailActivity"
             android:label="@string/activity_home_title"
             android:theme="@style/Theme.Phoenix4.NoActionBar">
-
-
-
         </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+        </activity>
+
         <activity
             android:name=".activity.ProductActivity"
             android:label="@string/activity_home_title"
             android:theme="@style/Theme.Phoenix4.NoActionBar">
         </activity>
+
+
         <activity
             android:name=".activity.SettingActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+        </activity>
+
+
+
+
+        <activity
+            android:name=".activity.SupplierActivity"
+            android:label="@string/activity_home_title"
+            android:theme="@style/Theme.Phoenix4.NoActionBar">
+        </activity>
+
+
+
+        <activity
+            android:name=".activity.EditProfileActivity"
             android:label="@string/activity_home_title"
             android:theme="@style/Theme.Phoenix4.NoActionBar">
         </activity>

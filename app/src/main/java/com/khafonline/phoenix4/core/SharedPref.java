@@ -131,6 +131,7 @@ public class SharedPref {
 
     public static void editUser(Profile profile) {
         if (profile == null) {
+            setInt(Constants.SHAREDPREF_PROFILE_ID, 0);
             setString(Constants.SHAREDPREF_PROFILE_EMAIL, "");
             setString(Constants.SHAREDPREF_PROFILE_FIRST_NAME, "");
             setString(Constants.SHAREDPREF_PROFILE_LAST_NAME, "");
@@ -144,8 +145,11 @@ public class SharedPref {
             setInt(Constants.SHAREDPREF_PROFILE_ACCEPTED, 0);
             setString(Constants.SHAREDPREF_PROFILE_REGION, "");
             setString(Constants.SHAREDPREF_PROFILE_BIO, "");
+            setString(Constants.SHAREDPREF_PROFILE_ADDRESS, "");
+            setString(Constants.SHAREDPREF_PROFILE_EMAIL, "");
         } else {
 //            setString(Constants.SHAREDPREF_PROFILE_EMAIL, profile.getEmail());
+            setInt(Constants.SHAREDPREF_PROFILE_ID, profile.getId());
             setString(Constants.SHAREDPREF_PROFILE_FIRST_NAME, profile.getFirst_name());
             setString(Constants.SHAREDPREF_PROFILE_LAST_NAME, profile.getLast_name());
             setString(Constants.SHAREDPREF_PROFILE_TOKEN, profile.getToken());
@@ -157,6 +161,8 @@ public class SharedPref {
 //            setString(Constants.SHAREDPREF_PROFILE_INVITED,profile.getInviter()==null?"": profile.getInviter().getFullName());
             setString(Constants.SHAREDPREF_PROFILE_BIO, profile.getBio());
 //            setString(Constants.SHAREDPREF_PROFILE_REGION, profile.getCity());
+            setString(Constants.SHAREDPREF_PROFILE_ADDRESS, profile.getAddress());
+            setString(Constants.SHAREDPREF_PROFILE_EMAIL, profile.getEmail());
         }
     }
 
@@ -167,6 +173,7 @@ public class SharedPref {
 //        profile.setShipper_id(getInt(Constants.SHAREDPREF_SHIPPER_ID));
 //        profile.setSupplier_id(getInt(Constants.SHAREDPREF_SUPPLIER_ID));
 //        profile.setEmail(getString(Constants.SHAREDPREF_PROFILE_EMAIL));
+        profile.setId(getInt(Constants.SHAREDPREF_PROFILE_ID));
         profile.setFirst_name(getString(Constants.SHAREDPREF_PROFILE_FIRST_NAME));
         profile.setLast_name(getString(Constants.SHAREDPREF_PROFILE_LAST_NAME));
         profile.setToken(getString(Constants.SHAREDPREF_PROFILE_TOKEN));
@@ -175,6 +182,8 @@ public class SharedPref {
 //        profile.setUsername(getString(Constants.SHAREDPREF_PROFILE_USERNAME));
 //        profile.setCity(getString(Constants.SHAREDPREF_PROFILE_REGION));
         profile.setBio(getString(Constants.SHAREDPREF_PROFILE_BIO));
+        profile.setEmail(getString(Constants.SHAREDPREF_PROFILE_EMAIL));
+        profile.setAddress(getString(Constants.SHAREDPREF_PROFILE_ADDRESS));
 
 //        if (profile.getToken().equals(""))
 //            return null;
@@ -204,5 +213,8 @@ public class SharedPref {
         return getString(RememberedPassword);
     }
 
+    public static void setToken(String token) {
+        setString(Constants.SHAREDPREF_PROFILE_TOKEN,token);
+    }
 }
 

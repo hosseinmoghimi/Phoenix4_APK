@@ -5,10 +5,28 @@ import java.util.List;
 public class LeoResponse {
     List<Category> categories;
     List<Product> products;
+    List<CartLine> cartLines;
     Product product;
     String result;
     String token;
     Profile profile;
+    Cart cart;
+
+    public List<CartLine> getCartLines() {
+        return cartLines;
+    }
+
+    public void setCartLines(List<CartLine> cartLines) {
+        this.cartLines = cartLines;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     public Product getProduct() {
         return product;

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/productThumbnail"
+            android:scaleType="fitXY"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:layoutDirection="rtl"
+            android:paddingStart="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp">
+
+            <com.khafonline.phoenix4.component.MyTextView
+                android:id="@+id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:text="productTitle"
+                android:textSize="15dip"
+                android:textColor="@color/black" />
+
+
+            <com.khafonline.phoenix4.component.MyTextView
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:text="quantity"
+                android:textSize="15dip"
+                android:textColor="#00F"  />
+
+
+
+
+            <com.khafonline.phoenix4.component.MyTextView
+                android:id="@+id/unitPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:text="productTitle"
+                android:textSize="15dip"
+                android:textColor="@color/red"  />
+
+
+
+            <com.khafonline.phoenix4.component.MyTextView
+                android:id="@+id/supplierTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:text="product_title"
+                android:textColor="#666"
+                android:textSize="15dip"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
